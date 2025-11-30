@@ -1,89 +1,378 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, all">
-    <title>Kardos Gebäudereinigung - Wartungsarbeiten</title>
-    <style type="text/css">
-        html {
-            background: #f1f1f1;
+    
+    <!-- SEO & Meta Tags -->
+    <title>Kardos Gebäudereinigung | Professionelle Reinigung in Dresden & Sachsen</title>
+    <meta name="description" content="Kardos Gebäudereinigung in Dresden (Zur Wetterwarte). Ihr zuverlässiger Partner für Unterhaltsreinigung, Glasreinigung, Hausmeisterservice & Industriereinigung in Sachsen.">
+    <meta name="keywords" content="Gebäudereinigung, Dresden, Zur Wetterwarte, Sachsen, Unterhaltsreinigung, Büroreinigung, Hausmeisterservice, Reinigungsservice, Kardos">
+    <meta name="author" content="Kardos Gebäudereinigung">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Kardos Gebäudereinigung - Dresden">
+    <meta property="og:description" content="Professionelle Reinigung in der Wetterwarte Dresden. Wir sind weiterhin für Sie erreichbar.">
+    <meta property="og:url" content="https://www.kardos-gebaeudereinigung.de/">
+    <meta property="og:site_name" content="Kardos Gebäudereinigung">
+    <meta property="business:contact_data:street_address" content="Zur Wetterwarte 50, Haus 337/g">
+    <meta property="business:contact_data:locality" content="Dresden">
+    <meta property="business:contact_data:postal_code" content="01109">
+    <meta property="business:contact_data:country_name" content="Deutschland">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Kardos Gebäudereinigung",
+      "image": "", 
+      "description": "Professionelle Gebäudereinigung und Dienstleistungen in Dresden und Sachsen.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zur Wetterwarte 50, Haus 337/g",
+        "addressLocality": "Dresden",
+        "postalCode": "01109",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.1280", 
+        "longitude": "13.7870"
+      },
+      "url": "https://kardos-gebaeudereinigung.de",
+      "telephone": "+4935179990007",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "08:00",
+          "closes": "14:00"
         }
-        body {
-            background: #fff;
-            border: 1px solid #ccd0d4;
-            color: #444;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            margin: 2em auto;
-            padding: 1em 2em;
-            max-width: 700px;
-            -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Dresden"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sachsen"
         }
-        h1 {
-            border-bottom: 1px solid #dadada;
-            clear: both;
-            color: #666;
-            font-size: 24px;
-            margin: 30px 0 0 0;
-            padding: 0;
-            padding-bottom: 7px;
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #ffffff;
+            --light-blue: #0094db;
+            --dark-blue: #143557;
+            --yellow: #fec12c;
+            --black: #15141A;
+            --grey: #5B5B66;
+            
+            --bg-color: #f1f1f1; 
         }
-        #wartungsarbeit-page {
-            margin-top: 50px;
-        }
-        #wartungsarbeit-page p {
-            font-size: 14px;
-            line-height: 1.5;
-            margin: 25px 0 20px;
-        }
-        ul li {
-            margin-bottom: 10px;
-            font-size: 14px ;
-        }
-        a {
-            color: #2271b1;
-        }
-        a:hover,
-        a:active {
-            color: #135e96;
-        }
-        a:focus {
-            color: #043959;
-            box-shadow: 0 0 0 2px #2271b1;
-            outline: 2px solid transparent;
-        }
-        .button {
-            background: #f3f5f6;
-            border: 1px solid #016087;
-            color: #016087;
-            display: inline-block;
-            text-decoration: none;
-            font-size: 13px;
-            line-height: 2;
-            height: 28px;
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 0 10px 1px;
-            cursor: pointer;
-            border-radius: 3px;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--grey);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-image: linear-gradient(var(--white) 2px, transparent 2px),
+            linear-gradient(90deg, var(--white) 2px, transparent 2px);
+            background-size: 40px 40px;
+            background-color: #f4f4f4;
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            width: 100%;
+            max-width: 750px;
+            border-radius: 8px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid var(--light-blue);
+        }
+
+        .header-bar {
+            background: var(--white);
+            padding: 2rem 2rem 1rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .content-body {
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--black);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--grey);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .info-section {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+            text-align: left; 
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--grey);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            border-bottom: 2px solid var(--yellow); 
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .contact-value, .address-value {
+            font-weight: 600;
+            color: var(--dark-blue);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        a.contact-value:hover {
+            color: var(--light-blue);
+        }
+
+        .hours-grid {
+            margin-top: 1.5rem;
+            border-top: 1px solid #ddd;
+            padding-top: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .hours-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+
+        .hours-item {
+            font-size: 0.9rem;
+            color: var(--black);
+        }
+        .hours-item span {
+            display: block;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--grey);
+        }
+
+        .services-preview {
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+        }
+
+        .services-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--dark-blue);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .services-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .services-list li {
+            font-size: 0.9rem;
+            color: var(--black);
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--grey);
         }
     </style>
 </head>
-<body id="wartungsarbeit-page">
-    <div class="message-container">
-        <h1>Kardos Gebäudereinigung - Wartungsarbeit</h1>
-        <p>Unsere Website wird momentan überarbeitet, um Ihnen künftig einen noch besseren Service bieten zu können. Während dieser Wartungsarbeiten stehen wir Ihnen selbstverständlich weiterhin telefonisch (<strong>+49 (151) 5999 5639 </strong>) und per E-Mail (<strong id="email"></strong>) zur Verfügung.</p>
-        <p>Vielen Dank für Ihr Verständnis – Ihr Team von Kardos Gebäudereinigung.</p>
+<body>
+
+    <div class="main-container">
+        <main class="card" id="wartungsarbeit-page">
+            <div class="header-bar">
+                <div class="brand-name">Kardos Gebäudereinigung</div>
+            </div>
+            
+            <div class="content-body">
+                <span class="status-badge">Wartungsarbeiten</span>
+                
+                <h1>Wir sind bald zurück.</h1>
+                
+                <p class="subtitle">
+                    Unsere Webseite wird aktuell überarbeitet. <br>
+                    Der Geschäftsbetrieb läuft uneingeschränkt weiter.
+                </p>
+
+                <div class="info-section">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="contact-label">Kontakt</span>
+                            <a href="tel:+4935179990007" class="contact-value">+49 (351) 7999 0007</a>
+                            <!-- Email -->
+                            <div id="email-container"></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Adresse</span>
+                            <span class="address-value">
+                                Zur Wetterwarte 50, Haus 337/g<br>
+                                01109 Dresden
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="hours-grid">
+                        <div class="hours-item">
+                            <span>Mo - Do</span> 08:00 – 17:00
+                        </div>
+                        <div class="hours-item">
+                            <span>Fr</span> 08:00 – 14:00
+                        </div>
+                        <div class="hours-item">
+                            <span>Sa - So</span> Geschlossen
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-preview">
+                    <h2 class="services-title">Unsere Leistungen</h2>
+                    <ul class="services-list">
+                        <li>Unterhaltsreinigung</li>
+                        <li>Glasreinigung</li>
+                        <li>Grundreinigung</li>
+                        <li>Büroreinigung</li>
+                        <li>Industriereinigung</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
     </div>
 
-    <script type="text/javascript">
+    <footer>
+        &copy; <span id="year"></span> Kardos Gebäudereinigung Sachsen.
+    </footer>
 
+    <script type="text/javascript">
+        document.getElementById('year').textContent = new Date().getFullYear();
         var emailEncoded = "YW5mcmFnZUBrYXJkb3MtZ2ViYWV1ZGVyZWluaWd1bmcuZGU=";  
         var emailStr = atob(emailEncoded); 
 
-        // Az email cím beillesztése a HTML-be
-        var emailElement = document.getElementById("email");
-        emailElement.innerHTML = '<a href="mailto:' + emailStr + '">' + emailStr + '</a>';
+        var emailContainer = document.getElementById("email-container");
+        emailContainer.innerHTML = '<a href="mailto:' + emailStr + '" class="contact-value" style="display:block; margin-top:5px;">' + emailStr + '</a>';
     </script>
 </body>
 </html>
