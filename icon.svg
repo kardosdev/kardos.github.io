@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Réteg_1" data-name="Réteg 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1002.59 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #2394d2;
+      }
+
+      .cls-3 {
+        fill: #153657;
+      }
+    </style>
+  </defs>
+  <rect id="rect17" class="cls-1" x="44.63" y="54.85" width="957.96" height="926.1"/>
+  <rect id="rect7" class="cls-2" width="476.32" height="476.26"/>
+  <rect id="rect8" class="cls-3" x="523.8" y="0" width="476.32" height="476.26"/>
+  <rect id="rect9" class="cls-3" y="523.74" width="476.32" height="476.26"/>
+  <rect id="rect10" class="cls-2" x="523.8" y="523.74" width="476.32" height="476.26"/>
+</svg>
